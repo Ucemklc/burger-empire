@@ -9,7 +9,7 @@ A Unity / C# restaurant-management game prototype by Ulaş Cem Kılıç.
 - Save/load handling, localization, audio and editor validation tools.
 
 ## Open the project
-1. Download and extract `burger-empire-source.zip`.
+1. Download and extract [burger-empire-source.zip](burger-empire-source.zip).
 2. In Unity Hub, add the extracted project folder.
 3. Open with **Unity 6000.3.20f1** and allow Package Manager to restore dependencies.
 4. Open `Assets/BurgerEmpire/Scenes/BurgerEmpire.unity` and press Play.
@@ -26,3 +26,7 @@ Development prototype. This upload has not been rebuilt or play-tested. The rewa
 
 ## Rights
 No open-source license is granted by this upload. Third-party dependencies retain their own license terms.
+
+## Browse code on GitHub
+
+Selected C# files are also provided at the repository root for quick review. They are excerpts from the archive, not a separate runnable project. Use the archive for the original directory structure and complete included source files.
