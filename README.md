@@ -1,32 +1,61 @@
 # Burger Empire
 
-A Unity / C# restaurant-management game prototype by Ulaş Cem Kılıç.
+**Sipariş al, mutfağı yönet, restoranını büyüt.**
 
-## Features
-- Restaurant simulation, customer orders and staff operations.
-- Restaurant layout editing, menu management and progression.
-- Drive-through, delivery, branches, shifts and VIP customer systems.
-- Save/load handling, localization, audio and editor validation tools.
+Unity ve C# ile geliştirdiğim restoran yönetimi prototipi. Müşteri siparişlerini, çalışanları ve servis akışını yönetirken restoran düzenini ve işletmenin ilerlemesini kontrol ediyorsun.
 
-## Open the project
-1. Download and extract [burger-empire-source.zip](burger-empire-source.zip).
-2. In Unity Hub, add the extracted project folder.
-3. Open with **Unity 6000.3.20f1** and allow Package Manager to restore dependencies.
-4. Open `Assets/BurgerEmpire/Scenes/BurgerEmpire.unity` and press Play.
+**Geliştirici:** [Ulaş Cem Kılıç](https://github.com/Ucemklc) · **Unity:** 6000.3.20f1 · **Dil:** C# · **Render:** URP · **Hedef:** Android
 
-The archive contains `Assets`, `Packages`, `ProjectSettings` and a Unity `.gitignore`. Generated caches, local saves, signing files and build outputs are excluded.
+[Kaynak projeyi indir](burger-empire-source.zip) · [Simülasyon kodu](Simulation.cs) · [Kayıt sistemi](ProgressStore.cs) · [Diğer oyunum: Neon Courier](https://github.com/Ucemklc/neon-courier)
 
-## Code map
-- `Assets/BurgerEmpire/Core`: simulation, progression, saves and localization.
-- `Assets/BurgerEmpire/Runtime`: game presentation, UI, movement and audio.
-- `Assets/BurgerEmpire/Editor`: setup, checks and Android release tooling.
+![Burger Empire — restoran ve sipariş yönetimi](restaurant.png)
 
-## Status
-Development prototype. This upload has not been rebuilt or play-tested. The rewarded-ad flow is an editor test implementation; production ads and store release validation are not claimed.
+## Oynanış
 
-## Rights
-No open-source license is granted by this upload. Third-party dependencies retain their own license terms.
+**Sipariş → pişirme → servis → ödeme → temizlik → geliştirme**
 
-## Browse code on GitHub
+- Müşteri siparişlerini takip et, masaların ve mutfağın iş akışını yönet.
+- Personeli geliştir ve servis önceliklerini belirle.
+- Restoran yerleşimini düzenle; menü, şube, paket servis ve araçtan servis sistemlerini keşfet.
+- Vardiya, VIP müşteriler, değerlendirmeler ve başarımlar üzerinden ilerle.
 
-Selected C# files are also provided at the repository root for quick review. They are excerpts from the archive, not a separate runnable project. Use the archive for the original directory structure and complete included source files.
+## Oyun içinden
+
+| Personel yönetimi | Araçtan servis ve restoran operasyonu |
+| --- | --- |
+| ![Personel yükseltme ekranı](team.png) | ![Restoran ve araçtan servis ekranı](service.png) |
+
+Görüntüler yerel geliştirme sürümü 0.30'dan alınmıştır. Kaynak arşivindeki yayın planı 0.31.0 sürümünü hedefler.
+
+## Teknik olarak neler var?
+
+| Sistem | İncelenecek kod | Öne çıkan nokta |
+| --- | --- | --- |
+| Oyun simülasyonu | [Simulation.cs](Simulation.cs) | Restoranın işleyişi ve ilerleme verileri |
+| Kayıt / yükleme | [ProgressStore.cs](ProgressStore.cs) | Geçici dosya, yedekten kurtarma ve geçersiz kayıt kontrolü |
+| Yerleşim | [RestaurantLayout.cs](RestaurantLayout.cs) | Restoran düzenine ait veri ve kurallar |
+| Yerelleştirme | [Localization.cs](Localization.cs) | Dil seçimi ve arayüz metinleri |
+| Ödül akışı | [RewardedAdFlow.cs](RewardedAdFlow.cs) | Ödüllü reklam akışının prototip mantığı |
+
+Arşivde `Core` oyun mantığını, `Runtime` Unity sunumunu ve arayüzü, `Editor` ise kurulum ve doğrulama araçlarını içerir. Depo kökündeki C# dosyaları hızlı inceleme için seçilmiş kopyalardır; proje yapısı ZIP arşivindedir.
+
+## Unity'de açma
+
+1. [burger-empire-source.zip](burger-empire-source.zip) dosyasını indirip çıkart.
+2. Unity Hub'da çıkarttığın klasörü proje olarak ekle.
+3. **Unity 6000.3.20f1** ile aç ve paketlerin yüklenmesini bekle.
+4. `Assets/BurgerEmpire/Scenes/BurgerEmpire.unity` sahnesini açıp **Play** düğmesine bas.
+
+Arşiv `Assets`, `Packages`, `ProjectSettings` ve Unity `.gitignore` dosyasını içerir. Önbellekler, yerel oyuncu kayıtları ve imzalama dosyaları dahil değildir.
+
+## Geliştirme durumu
+
+Oyun geliştirme aşamasında bir prototiptir. Ödüllü reklam entegrasyonu editör test akışı seviyesindedir; canlı reklam sağlayıcısı veya mağaza yayını olarak sunulmaz. Bu GitHub düzenlemesi sırasında yeniden derleme veya cihaz testi yapılmadı.
+
+## English overview
+
+A Unity 6 / C# restaurant-management prototype featuring customer orders, staff upgrades, restaurant layout, progression, delivery and drive-through systems. Explore the linked C# samples, or download the source archive to inspect the original Unity project structure. Screenshots show a development build.
+
+## Kullanım hakları
+
+Bu depoda açık kaynak lisansı verilmemiştir. Üçüncü taraf bağımlılıklar kendi lisanslarına tabidir.
